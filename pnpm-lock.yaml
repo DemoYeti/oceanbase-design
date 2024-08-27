@@ -295,8 +295,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       jscodeshift:
-        specifier: ^0.16.1
-        version: 0.16.1(@babel/preset-env@7.25.4)
+        specifier: ^17.0.0
+        version: 17.0.0(@babel/preset-env@7.25.4)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -2254,6 +2254,7 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.25.4
+    dev: true
 
   /@babel/parser@7.25.4:
     resolution: {integrity: sha512-nq+eWrOgdtu3jG5Os4TQP3x3cLA8hR8TvJNjD8vnPa20WGycimcparWnLK4jJhElTK6SDyuJo1weMKO/5LpmLA==}
@@ -2604,19 +2605,6 @@ packages:
     dependencies:
       '@babel/core': 7.24.9
       '@babel/helper-plugin-utils': 7.24.8
-
-  /@babel/plugin-transform-class-properties@7.24.7(@babel/core@7.24.9):
-    resolution: {integrity: sha512-vKbfawVYayKcSeSR5YYzzyXvsDFWU2mD8U5TFeXtbCPLFUqe7GyCgvO6XDHzje862ODrOwy6WCPmKeWHbCFJ4w==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.24.9
-      '@babel/helper-create-class-features-plugin': 7.25.4(@babel/core@7.24.9)
-      '@babel/helper-plugin-utils': 7.24.8
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /@babel/plugin-transform-class-properties@7.25.4(@babel/core@7.24.9):
     resolution: {integrity: sha512-nZeZHyCWPfjkdU5pA/uHiTaDAFUEqkpzf1YoQT2NeSynCGYq9rxfyI3XpQbfx/a0hSnFH6TGlEXvae5Vi7GD8g==}
@@ -2972,19 +2960,6 @@ packages:
     dependencies:
       '@babel/core': 7.24.9
       '@babel/helper-plugin-utils': 7.24.8
-
-  /@babel/plugin-transform-private-methods@7.24.7(@babel/core@7.24.9):
-    resolution: {integrity: sha512-COTCOkG2hn4JKGEKBADkA8WNb35TGkkRbI5iT845dB+NyqgO8Hn+ajPbSnIQznneJTa3d30scb6iz/DhH8GsJQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.24.9
-      '@babel/helper-create-class-features-plugin': 7.25.4(@babel/core@7.24.9)
-      '@babel/helper-plugin-utils': 7.24.8
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /@babel/plugin-transform-private-methods@7.25.4(@babel/core@7.24.9):
     resolution: {integrity: sha512-ao8BG7E2b/URaUQGqN3Tlsg+M3KlHY6rJ1O1gXAEUnZoyNQnvKyH87Kfg+FoxSeyWUB8ISZZsC91C44ZuBFytw==}
@@ -16074,8 +16049,9 @@ packages:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
     dev: true
 
-  /jscodeshift@0.16.1(@babel/preset-env@7.25.4):
-    resolution: {integrity: sha512-oMQXySazy63awNBzMpXbbVv73u3irdxTeX2L5ueRyFRxi32qb9uzdZdOY5fTBYADBG19l5M/wnGknZSV1dzCdA==}
+  /jscodeshift@17.0.0(@babel/preset-env@7.25.4):
+    resolution: {integrity: sha512-Af+MFsNwLSVO+t4kKjJdJKh6iNbNHfDfFGdyltJ2wUFN3furgbvHguJmB85iou+fY7wbHgI8eiEKpp6doGgtKg==}
+    engines: {node: '>=16'}
     hasBin: true
     peerDependencies:
       '@babel/preset-env': ^7.1.6
@@ -16084,22 +16060,21 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.24.9
-      '@babel/parser': 7.24.8
-      '@babel/plugin-transform-class-properties': 7.24.7(@babel/core@7.24.9)
+      '@babel/parser': 7.25.4
+      '@babel/plugin-transform-class-properties': 7.25.4(@babel/core@7.24.9)
       '@babel/plugin-transform-modules-commonjs': 7.24.8(@babel/core@7.24.9)
       '@babel/plugin-transform-nullish-coalescing-operator': 7.24.7(@babel/core@7.24.9)
       '@babel/plugin-transform-optional-chaining': 7.24.8(@babel/core@7.24.9)
-      '@babel/plugin-transform-private-methods': 7.24.7(@babel/core@7.24.9)
+      '@babel/plugin-transform-private-methods': 7.25.4(@babel/core@7.24.9)
       '@babel/preset-env': 7.25.4(@babel/core@7.24.9)
       '@babel/preset-flow': 7.24.7(@babel/core@7.24.9)
       '@babel/preset-typescript': 7.24.7(@babel/core@7.24.9)
       '@babel/register': 7.24.6(@babel/core@7.24.9)
-      chalk: 4.1.2
       flow-parser: 0.241.0
       graceful-fs: 4.2.11
       micromatch: 4.0.7
       neo-async: 2.6.2
-      node-dir: 0.1.17
+      picocolors: 1.0.1
       recast: 0.23.9
       temp: 0.9.4
       write-file-atomic: 5.0.1
@@ -18254,13 +18229,6 @@ packages:
     resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==}
     dev: true
     optional: true
-
-  /node-dir@0.1.17:
-    resolution: {integrity: sha512-tmPX422rYgofd4epzrNoOXiE8XFZYOcCq1vD7MAXCDO+O+zndlA2ztdKKMa+EeuBG5tHETpr4ml4RGgpqDCCAg==}
-    engines: {node: '>= 0.10.5'}
-    dependencies:
-      minimatch: 3.1.2
-    dev: false
 
   /node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
